@@ -12,6 +12,9 @@ erDiagram
         string password_hash
         string level
         int coins_balance
+        int xp
+        int streak
+        int spins
         boolean is_admin
     }
 
@@ -26,7 +29,8 @@ erDiagram
         string sku PK
         string name
         int price
-        string item_type
+        string slot
+        string asset
     }
 
     INVENTORY {
@@ -45,7 +49,7 @@ erDiagram
 ```
 # Таблица: USERS (Пользователи)
 
-**Хранит основные данные учеников и администраторов, а также их экономический баланс.**
+**Хранит основные данные учеников и администраторов, а также их экономический баланс и игровой прогресс (основано на данных выдачи заданий и Колеса Фортуны).**
 
 | Поле(Атрибут) | Тип данных | Описание и Связи |
 | --- | --- | --- |
@@ -53,8 +57,11 @@ erDiagram
 | email | String | Email для авторизации (уникальное поле) |
 | username | String | Имя/логин ученика на платформе |
 | password_hash | String | Зашифрованный пароль |
-| level | String | Текущий уровень знаний (указывается при регистрации) |
-| coins_balance | Integer | Баланс виртуальных монет (обновляется при бонусах и покупках) |
+| level | String | Текущий уровень знаний (подставляется из результатов диагностики, например "advanced") |
+| coins_balance | Integer | Баланс виртуальных монет (обновляется при прохождении уроков, покупках и Колесе Фортуны) |
+| xp | Integer | Очки опыта, получаемые за успешное решение заданий |
+| streak | Integer | Серия непрерывных решений/дней (стрик) |
+| spins | Integer | Доступное количество вращений для Колеса Фортуны |
 | is_admin | Boolean | Флаг администратора (доступ к /admin панелям) |
 
 # Таблица: TASKS (Задания и тесты)
@@ -77,7 +84,8 @@ erDiagram
 | sku | String | (Primary Key) Артикул/уникальный строковый код товара |
 | name | String | Название предмета (например, "Шляпа волшебника") |
 | price | Integer | Стоимость предмета в монетах |
-| item_type | String | Категория товара (скин, аватарка, рамка) |
+| slot | String | Категория/слот экипировки (например, "head") |
+| asset | String | Идентификатор визуального ассета для рендера (например, "cap") |
 
 # Таблица: INVENTORY (Инвентарь покупок)
 
@@ -98,6 +106,6 @@ erDiagram
 | --- | --- | --- |
 | id | Integer | (Primary Key) Уникальный ID записи |
 | user_id | Integer | (Foreign Key) Ссылка на id из таблицы USERS |
-| sku | String | (Foreign Key) Ссылка на id из таблицы TASKS |
-| is_equipped | Boolean | Текущий статус (например: completed, pending, failed) |
+| task_id | Integer | (Foreign Key) Ссылка на id из таблицы TASKS |
+| status | String | Текущий статус (например: completed, pending, failed) |
 
