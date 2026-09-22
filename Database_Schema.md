@@ -1,4 +1,10 @@
+```mermaid
 erDiagram
+    USERS ||--o{ INVENTORY : owns
+    SHOP_ITEMS ||--o{ INVENTORY : contains
+    USERS ||--o{ USER_PROGRESS : tracks
+    TASKS ||--o{ USER_PROGRESS : includes
+
     USERS {
         int id PK
         string email
@@ -8,7 +14,7 @@ erDiagram
         int coins_balance
         boolean is_admin
     }
-    
+
     TASKS {
         int id PK
         int lesson_id
@@ -36,8 +42,4 @@ erDiagram
         int task_id FK
         string status
     }
-
-    USERS ||--o{ INVENTORY : "владеет"
-    SHOP_ITEMS ||--o{ INVENTORY : "лежит в"
-    USERS ||--o{ USER_PROGRESS : "проходит"
-    TASKS ||--o{ USER_PROGRESS : "решена в"
+```
