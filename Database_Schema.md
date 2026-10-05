@@ -146,6 +146,7 @@ erDiagram
         int correct_count
         int total_count
         string determined_level
+        text experience
         datetime started_at
         datetime finished_at
     }
@@ -409,6 +410,7 @@ erDiagram
 | `correct_count` | int | — | да | — |
 | `total_count` | int | — | да | — |
 | `determined_level` | string | — | нет | — |
+| `experience` | text |	— |	да | — |
 | `started_at` | datetime | — | да | — |
 | `finished_at` | datetime | — | нет | — |
 
