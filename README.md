@@ -167,3 +167,7 @@
 2. **Мониторинг Kanban-доски в YouGile:** Кристина (PM) ежедневно отслеживает движение карточек по колонкам (`Backlog` ➔ `In Progress` ➔ `Review` ➔ `Done`).
 3. **Обязательное Code Review:** Ни один коммит не попадает в главную ветку без проверки Леной (TL) через Pull Request на GitHub.
 4. **Мониторинг логов и Smoke-тестирование:** Проверка доступности бэкенда через эндпоинт `GET https://maks.my/codehog/health` (возвращает `200 OK`) и регулярный просмотр логов сервера на предмет ошибок.
+
+## 4.7 Дизайн-макет в Figma
+
+[Figma: CodeHogwarts — Лендинг](https://www.figma.com/design/KEdifLlCFNPtZwV7chzBMp/CodeHogwarts-%E2%80%94-%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3?node-id=0-1&t=afV8DfwTCIJecXRM-1)
