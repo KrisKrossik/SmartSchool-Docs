@@ -155,7 +155,7 @@
 
 Ответ (200 OK):   
 
-`{ "ok": true, "coins": 235, "equipped": true, "slot": "head", "asset": "cap" }`
+`{ "ok": true, "coins": 235, "equipped": true, "slot": "skin", "asset": "1-2" }`
 
 Ошибки: 400 ("Не хватает N монет"), 404 (уровень коллекции ещё не открыт», если сервер её отдаёт).  
 
