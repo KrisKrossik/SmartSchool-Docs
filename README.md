@@ -126,7 +126,7 @@
 ### 4.4. Ресурсы проекта
 
 Для реализации проекта используются следующие типы ресурсов:
-* **Человеческие ресурсы:** Команда из 5 человек (PM/BA/Database Dev, Lead BA/Lead Designer, Team Lead/SA/Frontend Dev, Lead SA, Backend Dev/Designer).
+* **Человеческие ресурсы:** Команда из 5 человек (PM/BA/Database Dev, Lead BA/Lead Designer, Team Lead/SA/Frontend Dev, Lead SA, Backend Dev/DevOps).
 * **Инфраструктура и Хостинг:**
   * Сервер для деплоя бэкенда и Swagger UI (`https://maks.my/codehog`).
   * SSL-сертификаты для безопасности HTTP-запросов.
